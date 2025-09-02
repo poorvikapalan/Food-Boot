@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        
+        .nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #ff6b35;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        
+        .container h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #f1f1f1;
+        }
+        
+        .start-btn {
+            background-color: #ff6b35;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .start-btn:hover {
+            background-color: #ff3d00;
+            transform: scale(1.05);
+        }
+        
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container h1 {
+                font-size: 2rem;
+            }
+            .container p {
+                font-size: 1rem;
+            }
+            .nav {
+                top: 15px;
+                right: 15px;
+            }
+            .nav a {
+                font-size: 0.9rem;
+                margin-left: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- 🧠 Food Bot Main Section -->
+    <div class="container">
+        <div class="icon">
+            <i class="fas fa-utensils"></i>
+        </div>
+        <h1>Welcome to Food Bot</h1>
+        <p>Your AI-powered companion for recipes, food ideas, and cooking tips. Let’s make something delicious!</p>
+        <p><a href="registration.html">Register For Food Bot</a></p>
+        <p><a href="about.html">about Food BOt</a></p>
+    </div>
+
+
+</body>
+
+</html>

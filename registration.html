@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Bot Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f4e3;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h2 {
+            color: #4caf50;
+        }
+        
+        label {
+            display: block;
+            margin: 12px 0 6px;
+            text-align: left;
+        }
+        
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4caf50;
+            color: white;
+            margin-top: 16px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .back-home {
+            margin-top: 12px;
+            background-color: #ccc;
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+        
+        .back-home:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Food Bot Registration</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="^\+?\d{7,15}$" required />
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password</label>
+
+            <input type="password" id="password" name="password" placeholder="Create a password" required />
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Back to home link -->
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "eee1570f-fb55-42ba-82ed-f001493fe81c", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "551c1a47-7507-4b22-bd85-0371e9825132", // The ID of your service instance.
+            onLoad: async(instance) => {
+                await instance.render();
+            }
+        };
+        setTimeout(function() {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</body>
+
+</html>
